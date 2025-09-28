@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "uberclone",
+    "slug": "uberclone",
+    "scheme": "uberclone",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ],
+      "expo-notifications",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox"
+        }
+      ]
+    ],
+    "ios": {
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We gebruiken je locatie om ritten te tonen en te tracken.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Locatie is nodig wanneer je chauffeur bent en online staat.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    }
+  }
+}
